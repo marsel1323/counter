@@ -16,17 +16,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        counterLabelView.text = "Значение счётчика: \(counter)"
+        updateLabelView()
     }
 
 
     @IBAction func countButtonDidTup(_ sender: Any) {
         counter += 1
-        counterLabelView.text = "Значение счётчика: \(counter)"
+        updateLabelView()
     }
     
     @IBAction func resetButtonDidTap(_ sender: Any) {
         counter = 0
+        updateLabelView()
+    }
+    
+    func updateLabelView() {
         counterLabelView.text = "Значение счётчика: \(counter)"
     }
 }
