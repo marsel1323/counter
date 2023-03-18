@@ -29,7 +29,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="count"/>
                                 <connections>
-                                    <action selector="countButtonDidTup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jtC-LY-eQZ"/>
+                                    <action selector="countButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uss-cI-Vq8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2e-ed-Z1x">
@@ -46,9 +46,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="countButton" destination="wKf-zw-FAz" id="gPt-q3-Dtm"/>
                         <outlet property="counterLabelView" destination="NJe-cN-Z3N" id="dll-Cc-dEc"/>
-                        <outlet property="resetCounterButton" destination="C2e-ed-Z1x" id="5KI-eZ-8nO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
