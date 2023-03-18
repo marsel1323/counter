@@ -8,30 +8,30 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var counter = 0
-    
-    @IBOutlet weak var resetCounterButton: UIButton!
-    @IBOutlet weak var countButton: UIButton!
+    private var buttonPressCount = 0
+        
     @IBOutlet weak var counterLabelView: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        updateLabelView()
     }
 
-
-    @IBAction func countButtonDidTup(_ sender: Any) {
-        counter += 1
-        updateLabelView()
+    @IBAction func countButtonDidTap(_ sender: UIButton) {
+        buttonPressCount += 1
+        updateLabel()
     }
     
-    @IBAction func resetButtonDidTap(_ sender: Any) {
-        counter = 0
-        updateLabelView()
+    @IBAction func resetButtonDidTap(_ sender: UIButton) {
+        buttonPressCount = 0
+        updateLabel()
     }
     
-    func updateLabelView() {
-        counterLabelView.text = "Значение счётчика: \(counter)"
+    var labelText: String {
+        return "Значение счётчика: \(buttonPressCount)"
+    }
+    
+    func updateLabel() {
+        counterLabelView.text = labelText
     }
 }
 
